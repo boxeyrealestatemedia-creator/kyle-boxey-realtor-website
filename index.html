@@ -86,7 +86,7 @@ h2.heading em{font-style:italic;color:var(--orange);}
 /* FEATURED LISTINGS */
 .listings-bg{background:var(--surface);}
 .listings-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;}
-.listings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.listings-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
 
 .listing-card{background:var(--surface2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .3s;text-decoration:none;display:block;}
 .listing-card:hover{border-color:var(--border-hover);transform:translateY(-5px);box-shadow:0 24px 56px rgba(0,0,0,.4);}
@@ -359,30 +359,6 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 80px
           </div>
         </div>
       </a>
-
-      <!-- Firethorne -->
-      <a href="https://www.zillow.com/homedetails/5603-Firethorne-Dr-Bay-City-MI-48706/61253751_zpid/" target="_blank" class="listing-card reveal">
-        <div class="listing-img-wrap">
-          <img src="https://photos.zillowstatic.com/fp/6c47bef2938f492e46eee080980ed55e-cc_ft_960.jpg" alt="5603 Firethorne Dr, Bay City MI" class="listing-img">
-          <div class="listing-badge">For Sale</div>
-        </div>
-        <div class="listing-body">
-          <div class="listing-price">$330,000</div>
-          <div class="listing-address">5603 Firethorne Dr</div>
-          <div class="listing-city">Bay City, MI 48706</div>
-          <div class="listing-facts">
-            <div class="listing-fact"><strong>3</strong> Beds</div>
-            <div class="listing-fact"><strong>3</strong> Baths</div>
-            <div class="listing-fact"><strong>2,188</strong> Sq Ft</div>
-            <div class="listing-fact">Pond <strong>Views</strong></div>
-          </div>
-          <div class="listing-cta">
-            View Listing
-            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-        </div>
-      </a>
-
 
       <!-- E Ryan Dr -->
       <a href="https://www.zillow.com/homedetails/3343-E-Ryan-Dr-Midland-MI-48642/91734513_zpid/" target="_blank" class="listing-card reveal">

@@ -94,6 +94,8 @@ h2.heading em{font-style:italic;color:var(--orange);}
 .listing-card:hover .listing-img{transform:scale(1.03);}
 .listing-img-wrap{overflow:hidden;position:relative;}
 .listing-badge{position:absolute;top:16px;left:16px;background:var(--orange);color:var(--bg);font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px;}
+.listing-badge.pending{background:#E6D3A3;color:var(--bg);}
+.listing-badge.contingent{background:#A9C3D8;color:var(--bg);}
 .listing-body{padding:24px 28px 28px;}
 .listing-price{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--text);margin-bottom:6px;}
 .listing-address{font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px;}
@@ -341,7 +343,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 80px
       <a href="https://www.zillow.com/homes/3910-Plumtree-Lane-Midland-MI-48642_rb/" target="_blank" class="listing-card reveal">
         <div class="listing-img-wrap">
           <img src="assets/listings/3910-plumtree.jpg" alt="3910 Plumtree Lane, Midland MI exterior" class="listing-img">
-          <div class="listing-badge">For Sale</div>
+          <div class="listing-badge pending">Pending</div>
         </div>
         <div class="listing-body">
           <div class="listing-price">$530,000</div>
@@ -363,7 +365,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 80px
       <a href="https://www.zillow.com/homes/4708-Trail-Wood-Cir-N-Midland-MI-48642_rb/" target="_blank" class="listing-card reveal">
         <div class="listing-img-wrap">
           <img src="assets/listings/4708-trail-wood.jpg" alt="4708 Trail Wood Cir N, Midland MI twilight exterior" class="listing-img">
-          <div class="listing-badge">For Sale</div>
+          <div class="listing-badge contingent">Contingent</div>
         </div>
         <div class="listing-body">
           <div class="listing-price">$370,000</div>

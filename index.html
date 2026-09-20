@@ -86,7 +86,7 @@ h2.heading em{font-style:italic;color:var(--orange);}
 /* FEATURED LISTINGS */
 .listings-bg{background:var(--surface);}
 .listings-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;}
-.listings-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+.listings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
 
 .listing-card{background:var(--surface2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .3s;text-decoration:none;display:block;}
 .listing-card:hover{border-color:var(--border-hover);transform:translateY(-5px);box-shadow:0 24px 56px rgba(0,0,0,.4);}
@@ -329,7 +329,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 80px
     <div class="listings-header reveal">
       <div>
         <div class="tag">Featured Listings</div>
-        <h2 class="heading">Currently <em>For Sale</em></h2>
+        <h2 class="heading">Current <em>Listings</em></h2>
       </div>
       <a href="https://modernrealty.idxbroker.com/idx/search/advanced" target="_blank" class="btn-outline">
         Search All Listings
@@ -343,7 +343,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 80px
       <a href="https://www.zillow.com/homes/4708-Trail-Wood-Cir-N-Midland-MI-48642_rb/" target="_blank" class="listing-card reveal">
         <div class="listing-img-wrap">
           <img src="assets/listings/4708-trail-wood.jpg" alt="4708 Trail Wood Cir N, Midland MI twilight exterior" class="listing-img">
-          <div class="listing-badge contingent">Contingent</div>
+          <div class="listing-badge pending">Pending</div>
         </div>
         <div class="listing-body">
           <div class="listing-price">$350,000</div>
@@ -365,7 +365,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 80px
       <a href="https://www.zillow.com/homedetails/3343-E-Ryan-Dr-Midland-MI-48642/91734513_zpid/" target="_blank" class="listing-card reveal">
         <div class="listing-img-wrap">
           <img src="assets/listings/3343-e-ryan.jpg" alt="3343 E Ryan Dr, Midland MI twilight exterior" class="listing-img">
-          <div class="listing-badge">For Sale</div>
+          <div class="listing-badge pending">Pending</div>
         </div>
         <div class="listing-body">
           <div class="listing-price">$485,000</div>
@@ -376,6 +376,51 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 80px
             <div class="listing-fact"><strong>4</strong> Baths</div>
             <div class="listing-fact"><strong>3,873</strong> Sq Ft</div>
             <div class="listing-fact"><strong>0.93</strong> Acres</div>
+          </div>
+          <div class="listing-cta">
+            View Listing
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Scott St -->
+      <a href="https://www.zillow.com/homedetails/1300-Scott-St-Midland-MI-48642/77851472_zpid/" target="_blank" class="listing-card reveal">
+        <div class="listing-img-wrap">
+          <img src="assets/listings/1300-scott.jpg" alt="1300 Scott St, Midland MI exterior" class="listing-img">
+          <div class="listing-badge pending">Pending</div>
+        </div>
+        <div class="listing-body">
+          <div class="listing-price">$239,000</div>
+          <div class="listing-address">1300 Scott St</div>
+          <div class="listing-city">Midland, MI 48642</div>
+          <div class="listing-facts">
+            <div class="listing-fact"><strong>3</strong> Beds</div>
+            <div class="listing-fact"><strong>2</strong> Baths</div>
+            <div class="listing-fact"><strong>1,791</strong> Sq Ft</div>
+          </div>
+          <div class="listing-cta">
+            View Listing
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Huntley Ln -->
+      <a href="https://www.zillow.com/homedetails/55-Huntley-Ln-Midland-MI-48640/77848693_zpid/" target="_blank" class="listing-card reveal">
+        <div class="listing-img-wrap">
+          <img src="assets/listings/55-huntley.jpg" alt="55 Huntley Ln, Midland MI exterior" class="listing-img">
+          <div class="listing-badge pending">Pending</div>
+        </div>
+        <div class="listing-body">
+          <div class="listing-price">$235,000</div>
+          <div class="listing-address">55 Huntley Ln</div>
+          <div class="listing-city">Midland, MI 48640</div>
+          <div class="listing-facts">
+            <div class="listing-fact"><strong>3</strong> Beds</div>
+            <div class="listing-fact"><strong>2</strong> Baths</div>
+            <div class="listing-fact"><strong>1,396</strong> Sq Ft</div>
+            <div class="listing-fact"><strong>1</strong> Acre</div>
           </div>
           <div class="listing-cta">
             View Listing

@@ -41,6 +41,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;ali
 .nav-link:hover{color:var(--text);}
 .nav-btn{font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--bg);background:var(--orange);padding:9px 22px;border-radius:4px;text-decoration:none;transition:all .2s;}
 .nav-btn:hover{background:var(--orange-deep);transform:translateY(-1px);}
+.nav-tool{display:none;}
 
 /* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 500px;padding-top:68px;position:relative;overflow:hidden;}
@@ -150,6 +151,48 @@ h2.heading em{font-style:italic;color:var(--orange);}
 .svc p{font-size:14px;color:var(--text-muted);line-height:1.75;margin-bottom:22px;}
 .svc-link{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--orange);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:gap .2s;}
 .svc-link:hover{gap:10px;}
+.svc-actions{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+
+/* MORTGAGE CALCULATOR */
+.calculator-bg{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);scroll-margin-top:68px;}
+.calculator-intro{margin-bottom:34px;}
+.calculator-intro .lead{max-width:760px;}
+.calc-shell{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:20px;align-items:start;}
+.calc-panel{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:34px;min-width:0;}
+.calc-panel h3{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.2;margin-bottom:8px;}
+.calc-panel-sub{font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:26px;}
+.calc-group-title{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);margin:26px 0 14px;}
+.calc-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.calc-field{min-width:0;}
+.calc-field label{display:block;font-size:12px;font-weight:700;color:var(--text);margin-bottom:7px;}
+.calc-field small{display:block;font-size:12px;line-height:1.5;color:var(--text-muted);margin-top:6px;}
+.calc-input{position:relative;}
+.calc-input span{position:absolute;top:50%;left:15px;transform:translateY(-50%);color:var(--text-muted);font-size:15px;pointer-events:none;}
+.calc-input.suffix span{left:auto;right:15px;}
+.calc-input input{display:block;width:100%;min-height:48px;background:var(--bg);border:1px solid rgba(255,255,255,.18);border-radius:6px;color:var(--text);font:500 16px var(--sans);padding:11px 14px 11px 34px;font-variant-numeric:tabular-nums;}
+.calc-input.suffix input{padding-left:14px;}
+.calc-input.suffix input{padding-right:40px;}
+.calc-input input:focus-visible{outline:2px solid var(--orange);outline-offset:2px;border-color:var(--orange);}
+.calc-input input[aria-invalid="true"]{border-color:#F08D75;}
+.calc-assumption{font-size:12px;line-height:1.65;color:var(--text-muted);background:rgba(245,166,35,.06);border-left:2px solid var(--orange);padding:12px 15px;border-radius:0 6px 6px 0;margin-top:26px;}
+.calc-reset{background:none;border:0;color:var(--orange);font:700 12px var(--sans);text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:10px 0;margin-top:12px;}
+.calc-reset:focus-visible,.calc-contact:focus-visible,.nav-tool:focus-visible{outline:2px solid var(--orange);outline-offset:3px;}
+.calc-total-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);margin-bottom:8px;}
+.calc-total{font-family:var(--serif);font-size:clamp(38px,4vw,52px);font-weight:700;line-height:1.1;color:var(--text);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;}
+.calc-per-month{font-size:13px;color:var(--text-muted);margin-top:2px;}
+.calc-loan{font-size:13px;color:var(--text-muted);margin:20px 0 26px;}
+.calc-loan strong{color:var(--text);font-weight:600;}
+.calc-breakdown{border-top:1px solid var(--border);padding-top:18px;}
+.calc-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0;color:var(--text-muted);font-size:13px;}
+.calc-row strong{font-size:14px;color:var(--text);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.calc-row.primary{color:var(--text);font-weight:700;}
+.calc-row.primary strong{color:var(--orange);}
+.calc-status{min-height:22px;color:var(--text-muted);font-size:12px;line-height:1.5;margin-top:20px;}
+.calc-status-error{color:#FFB4A1;}
+.calc-contact{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);color:var(--bg);font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;text-decoration:none;border-radius:5px;min-height:46px;padding:12px 20px;margin:6px 0 16px;}
+.calc-contact:hover{background:var(--orange-deep);}
+.calc-disclaimer{font-size:12px;color:var(--text-muted);line-height:1.65;border-top:1px solid var(--border);padding-top:16px;}
+.calc-disclaimer a{color:var(--orange);text-underline-offset:2px;}
 
 /* REVIEWS */
 .reviews-bg{background:var(--surface);}
@@ -233,6 +276,8 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 80px
 @media(max-width:960px){
   nav{padding:0 20px;}
   .nav-right{display:none;}
+  .nav-left{gap:10px;}
+  .nav-tool{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 12px;border:1px solid var(--orange-line);border-radius:5px;color:var(--orange);font-size:12px;font-weight:700;text-decoration:none;}
   .hero{grid-template-columns:1fr;}
   .hero-content{padding:60px 24px;}
   .hero-photo-col{display:none;}
@@ -250,6 +295,14 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 80px
   .f-right{text-align:left;}
   .hero-stats{flex-wrap:wrap;gap:20px;}
   .hero-stat{border-right:none;padding-right:0;min-width:100px;}
+  .calc-shell{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .calc-panel{padding:24px 20px;}
+  .calc-fields{grid-template-columns:1fr;gap:15px;}
+}
+@media(max-width:420px){
+  .nav-logo,.nav-sep{display:none;}
 }
 </style>
 </head>
@@ -269,9 +322,11 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 80px
     <a href="#listings" class="nav-link">Listings</a>
     <a href="#about" class="nav-link">About</a>
     <a href="#services" class="nav-link">Services</a>
+    <a href="#mortgage-calculator" class="nav-link">Mortgage Calculator</a>
     <a href="#reviews" class="nav-link">Reviews</a>
     <a href="#contact" class="nav-btn">Let's Talk</a>
   </div>
+  <a href="#mortgage-calculator" class="nav-tool">Calculator</a>
 </nav>
 
 
@@ -463,13 +518,68 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 80px
         <div class="svc-num">02</div>
         <h3>Buying a Home</h3>
         <p>Expert guidance from search to keys — market analysis, offer strategy, inspections, and closing. Whether it's your first home or your fifth, I make it make sense.</p>
-        <a href="#contact" class="svc-link">Start Your Search <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <div class="svc-actions">
+          <a href="#contact" class="svc-link">Start Your Search <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#mortgage-calculator" class="svc-link">Estimate Payment</a>
+        </div>
       </div>
       <div class="svc">
         <div class="svc-num">03</div>
         <h3>Browse All Listings</h3>
         <p>Search the full MLS across Mid-Michigan — filter by city, price, school district, and more. Powered by Modern Realty's IDX platform.</p>
         <a href="https://modernrealty.idxbroker.com/idx/search/advanced" target="_blank" class="svc-link">Search Now <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MORTGAGE CALCULATOR -->
+<section class="section calculator-bg" id="mortgage-calculator" aria-labelledby="calculator-title">
+  <div class="section-inner">
+    <div class="calculator-intro reveal">
+      <div class="tag">Buyer Tool</div>
+      <h2 class="heading" id="calculator-title">Plan for the <em>Whole Payment.</em></h2>
+      <p class="lead">Explore a fixed-rate mortgage scenario and see how taxes, insurance, and other monthly costs change the picture. Adjust every number to fit the home you're considering.</p>
+    </div>
+    <div class="calc-shell">
+      <div class="calc-panel" role="group" aria-labelledby="calc-inputs-title">
+        <h3 id="calc-inputs-title">Your scenario</h3>
+        <p class="calc-panel-sub">Start with the illustrative values below, then enter your own estimates. No personal information is requested.</p>
+        <div class="calc-fields">
+          <div class="calc-field"><label for="calc-home-price">Home price</label><div class="calc-input"><span aria-hidden="true">$</span><input id="calc-home-price" type="number" inputmode="decimal" min="0" step="any" value="350000" required></div></div>
+          <div class="calc-field"><label for="calc-down-payment">Down payment</label><div class="calc-input"><span aria-hidden="true">$</span><input id="calc-down-payment" type="number" inputmode="decimal" min="0" step="any" value="35000" required></div></div>
+          <div class="calc-field"><label for="calc-down-percent">Down payment percentage</label><div class="calc-input suffix"><input id="calc-down-percent" type="number" inputmode="decimal" min="0" max="100" step="any" value="10" aria-describedby="calc-down-help" required><span aria-hidden="true">%</span></div><small id="calc-down-help">Dollars and percentage stay in sync.</small></div>
+          <div class="calc-field"><label for="calc-rate">Annual interest rate (%)</label><div class="calc-input suffix"><input id="calc-rate" type="number" inputmode="decimal" min="0" max="100" step="any" value="6.5" aria-describedby="calc-rate-help" required><span aria-hidden="true">%</span></div><small id="calc-rate-help">Example rate only, not a live quote.</small></div>
+          <div class="calc-field"><label for="calc-term">Loan term (years)</label><div class="calc-input suffix"><input id="calc-term" type="number" inputmode="numeric" min="1" max="50" step="1" value="30" required><span aria-hidden="true">years</span></div></div>
+        </div>
+        <div class="calc-group-title">Estimated ongoing costs</div>
+        <div class="calc-fields">
+          <div class="calc-field"><label for="calc-taxes">Property taxes per year</label><div class="calc-input"><span aria-hidden="true">$</span><input id="calc-taxes" type="number" inputmode="decimal" min="0" step="any" value="5000" required></div></div>
+          <div class="calc-field"><label for="calc-insurance">Homeowners insurance per year</label><div class="calc-input"><span aria-hidden="true">$</span><input id="calc-insurance" type="number" inputmode="decimal" min="0" step="any" value="1800" required></div></div>
+          <div class="calc-field"><label for="calc-pmi">Mortgage insurance per month</label><div class="calc-input"><span aria-hidden="true">$</span><input id="calc-pmi" type="number" inputmode="decimal" min="0" step="any" value="125" aria-describedby="calc-pmi-help" required></div><small id="calc-pmi-help">Edit based on your loan; no automatic cancellation schedule.</small></div>
+          <div class="calc-field"><label for="calc-hoa">HOA dues per month</label><div class="calc-input"><span aria-hidden="true">$</span><input id="calc-hoa" type="number" inputmode="decimal" min="0" step="any" value="0" aria-describedby="calc-hoa-help" required></div><small id="calc-hoa-help">Enter 0 only if there are no HOA dues.</small></div>
+        </div>
+        <p class="calc-assumption">These are example inputs, not a current mortgage rate, a Michigan property-tax estimate, or an insurance quote. All amounts are editable.</p>
+        <button class="calc-reset" id="calc-reset" type="button">Reset example values</button>
+      </div>
+      <div class="calc-panel" aria-labelledby="calc-results-title">
+        <h3 id="calc-results-title">Monthly estimate</h3>
+        <p class="calc-panel-sub">A planning snapshot based on the numbers you enter.</p>
+        <div class="calc-total-label">Estimated total</div>
+        <output class="calc-total" id="calc-total" aria-live="polite">—</output>
+        <div class="calc-per-month">per month</div>
+        <div class="calc-loan">Estimated loan amount: <strong id="calc-loan-amount">—</strong></div>
+        <div class="calc-breakdown" aria-label="Monthly cost breakdown">
+          <div class="calc-row primary"><span>Principal &amp; interest</span><strong id="calc-principal-interest">—</strong></div>
+          <div class="calc-row"><span>Property taxes</span><strong id="calc-monthly-taxes">—</strong></div>
+          <div class="calc-row"><span>Homeowners insurance</span><strong id="calc-monthly-insurance">—</strong></div>
+          <div class="calc-row"><span>Mortgage insurance</span><strong id="calc-monthly-pmi">—</strong></div>
+          <div class="calc-row"><span>HOA dues</span><strong id="calc-monthly-hoa">—</strong></div>
+        </div>
+        <p class="calc-status" id="calc-status" role="status" aria-live="polite"></p>
+        <a class="calc-contact" href="#contact">Talk through your next step</a>
+        <p class="calc-disclaimer">For planning only; this is not a loan offer or approval. Actual rates, taxes, insurance, mortgage insurance, and escrow payments may differ or change. Utilities, maintenance, repairs, and closing costs are not included. In Michigan, a transfer of ownership can change taxable value, so do not assume the seller's current tax bill will continue. Check the <a href="https://www.michigan.gov/taxes/property/estimator" target="_blank" rel="noopener noreferrer">Michigan property-tax estimator</a> or a local assessor for a property-specific estimate.</p>
       </div>
     </div>
   </div>
@@ -659,6 +769,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 80px
 </footer>
 
 
+<script src="assets/mortgage-calculator.js" defer></script>
 <script>
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("in"); });

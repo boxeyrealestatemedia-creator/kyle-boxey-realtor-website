@@ -87,6 +87,7 @@ h2.heading em{font-style:italic;color:var(--orange);}
 /* FEATURED LISTINGS */
 .listings-bg{background:var(--surface);}
 .listings-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;}
+.listings-header:only-child{margin-bottom:0;}
 .listings-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:18px;}
 
 .listing-card{background:var(--surface2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .3s;text-decoration:none;display:block;}
@@ -384,39 +385,14 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:40px 80px
   <div class="section-inner">
     <div class="listings-header reveal">
       <div>
-        <div class="tag">Featured Listings</div>
-        <h2 class="heading">Current <em>Listings</em></h2>
+        <div class="tag">Available Homes</div>
+        <h2 class="heading">Find Your <em>Next Home</em></h2>
+        <p class="lead">Explore homes for sale across Midland and Mid-Michigan through the full MLS search.</p>
       </div>
       <a href="https://modernrealty.idxbroker.com/idx/search/advanced" target="_blank" class="btn-outline">
-        Search All Listings
+        Search Available Homes
         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-    </div>
-
-    <div class="listings-grid">
-
-      <!-- Trail Wood Cir N -->
-      <a href="https://www.zillow.com/homes/4708-Trail-Wood-Cir-N-Midland-MI-48642_rb/" target="_blank" class="listing-card reveal">
-        <div class="listing-img-wrap">
-          <img src="assets/listings/4708-trail-wood.jpg" alt="4708 Trail Wood Cir N, Midland MI twilight exterior" class="listing-img">
-          <div class="listing-badge pending">Pending</div>
-        </div>
-        <div class="listing-body">
-          <div class="listing-price">$350,000</div>
-          <div class="listing-address">4708 Trail Wood Cir N</div>
-          <div class="listing-city">Midland, MI 48642</div>
-          <div class="listing-facts">
-            <div class="listing-fact"><strong>5</strong> Beds</div>
-            <div class="listing-fact"><strong>3</strong> Baths</div>
-            <div class="listing-fact"><strong>2,664</strong> Sq Ft</div>
-          </div>
-          <div class="listing-cta">
-            View Listing
-            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-        </div>
-      </a>
-
     </div>
   </div>
 </section>
